@@ -17,26 +17,24 @@ public class ProdusController {
   private List<Produs> produse = new ArrayList<Produs>();
 
   ProdusController() {
-    Produs p1 = new Produs(1, "Laptop");
+    Produs p1 = new Produs(1, "Telefon");
     Produs p2 = new Produs(2, "Tableta");
-    Produs p3 = new Produs(3, "Telefon");
+    Produs p3 = new Produs(3, "Laptop");
 
     produse.add(p1);
     produse.add(p2);
     produse.add(p3);
   }
 
-
-//GET ALL
+//GET ONE
   @RequestMapping(value="/produs", method = RequestMethod.GET)
   public List<Produs> index() {
     return this.produse;
   }
 
-
-//GET ONE
+//GET ALL
   @RequestMapping(value="/produs/{id}", method = RequestMethod.GET)
-  public ResponseEntity show(@PathVariable("id") int id) {
+  public ResponseEntity getprod(@PathVariable("id") int id) {
     for(Produs p : this.produse) {
       if(p.getId() == id) {
         return new ResponseEntity<Produs>(p, new HttpHeaders(), HttpStatus.OK);
@@ -45,25 +43,23 @@ public class ProdusController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
+//CREATE
+@RequestMapping(value="/produs/{id} /{name}", method = RequestMethod.POST)
+  public ResponseEntity createprod(@PathVariable("id") int id, @PathVariable("name") String name) {
 
-//POST
-@RequestMapping(value="/produs/{id}", method = RequestMethod.POST)
-  public ResponseEntity show(@PathVariable("id") int id) {
-
-    produs prod = new produs(id,"Nume");
+    Produs prod = new Produs(id,name);
     produse.add(prod);
     return new ResponseEntity<Produs>(prod, new HttpHeaders(), HttpStatus.OK);
   }
 
-
-//PUT
-  @RequestMapping(value="/produs/{id}", method = RequestMethod.PUT)
-  public ResponseEntity show(@PathVariable("id") int id) {
+//UPDATE
+  @RequestMapping(value="/produs/{id} /{name}", method = RequestMethod.PUT)
+  public ResponseEntity updateprod(@PathVariable("id") int id, @PathVariable("name") String name) {
     for(Produs p : produse)
     {
       if(id == p.getId())
       {
-        p.setId = 4;
+        p.setName(name);
         return new ResponseEntity<Produs>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -72,9 +68,9 @@ public class ProdusController {
   }
 
 
-  //DEL
-  @RequestMapping(value="/produs/{id}", method = RequestMethod.DEL)
-  public ResponseEntity remove(@PathVariable("id") int id) {
+//REMOVE
+  @RequestMapping(value="/produs/{id}", method = RequestMethod.DELETE)
+  public ResponseEntity removeprod(@PathVariable("id") int id) {
     for(Produs p : this.produse) {
       if(p.getId() == id) {
         this.produse.remove(p);
