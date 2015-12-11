@@ -1,21 +1,649 @@
 <!DOCTYPE html>
 <html ng-app="blog">
+
 <head>
-  <title>My application</title>
-  <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
-  <link rel="stylesheet" media="all" href="css/custom.css">
+    <title>My application</title>
+    <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="css/custom.css">
 </head>
+
 <body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="">AWJ Base Project</a>
+                </div>
 
-  <div class="container">
-    <div ng-controller="HomeController">
-      <h1>{{ helloWorld }}</h1>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Angajat</a></li>
+                        <li><a href="#">Animal</a></li>
+                        <li><a href="#">Produs</a></li>
+                        <li><a href="#">Student</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-  </div>
 
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/app.js"></script>
+    <hr/>
+
+    <div class="container">
+        <div ng-controller="HomeController">
+            <h1>{{ helloWorld }}</h1>
+            <p>Writing this live into the browser...</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- /resources1 -->
+    <div class="container">
+        <h1>Angajat</h1>
+        <h2>List all resources</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th style="width:210px;">Options</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ionescu</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Popescu</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Florescu</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Vasilescu</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Editare Angajat</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-info">Save</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-3 col-md-offset-6">
+                <h2>Adaugare Angajat</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <!-- /resources2-->
+    <div class="container">
+        <h1>Animal</h1>
+        <h2>List all resources</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th style="width:210px;">Options</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Urs</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Zebra</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Capybara</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Cartita</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Editare Animal</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-info">Save</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-3 col-md-offset-6">
+                <h2>Adaugare Animal</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <hr/>
+
+
+    <!-- /resources3-->
+    <div class="container">
+        <h1>Produs</h1>
+        <h2>List all resources</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th style="width:210px;">Options</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Telefon</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tableta</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Laptop</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>eBook Reader</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Editare Produs</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-info">Save</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-3 col-md-offset-6">
+                <h2>Adaugare Produs</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    
+    
+    <!-- /resources4-->
+    <div class="container">
+        <h1>Student</h1>
+        <h2>List all resources</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th style="width:210px;">Options</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bogdan</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Valentin</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Silviu</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Costin</td>
+                <td>
+                    <a href="">
+                        <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Editare Student</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-info">Save</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-3 col-md-offset-6">
+                <h2>Adaugare Student</h2>
+                <form action="" method="">
+                    <div class="form-group">
+                        <label for="attribute1">ID</label>
+                        <input type="text" class="form-control" id="attribute1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="attribute2">Nume</label>
+                        <input type="text" class="form-control" id="attribute2" placeholder="Nume">
+                    </div>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    
+    
+    
+    
+    
+    
+    
+    <div class="container">
+        <footer class="footer">
+            <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+            <p class="text-muted pull-right">Sirbu Nicolae-Cezar, 331AA</p>
+        </footer>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

@@ -17,11 +17,16 @@ public class AngajatController {
   private List<Angajat> angajati = new ArrayList<Angajat>();
 
   AngajatController() {
-    Angajat a1 = new Angajat(1,"Ion");
+    Angajat a1 = new Angajat(1,"Ionescu");
     Angajat a2 = new Angajat(2,"Popescu");
+    Angajat a3 = new Angajat(3,"Florescu");
+    Angajat a4 = new Angajat(4,"Vasilescu");
+
 
     angajati.add(a1);
     angajati.add(a2);
+    angajati.add(a3);
+    angajati.add(a4);
   }
 
 

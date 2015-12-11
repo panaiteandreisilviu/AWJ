@@ -20,10 +20,12 @@ public class ProdusController {
     Produs p1 = new Produs(1, "Telefon");
     Produs p2 = new Produs(2, "Tableta");
     Produs p3 = new Produs(3, "Laptop");
+    Produs p3 = new Produs(4, "eBook Reader");
 
     produse.add(p1);
     produse.add(p2);
     produse.add(p3);
+    produse.add(p4);
   }
 
 //GET ONE

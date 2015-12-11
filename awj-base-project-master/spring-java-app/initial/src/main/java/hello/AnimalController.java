@@ -20,10 +20,12 @@ public class AnimalController {
     Animal a1 = new Animal(1, "Urs");
     Animal a2 = new Animal(2, "Zebra");
     Animal a3 = new Animal(3, "Capybara");
+    Animal a3 = new Animal(4, "Cartita");
 
     animale.add(a1);
     animale.add(a2);
     animale.add(a3);
+    animale.add(a4);
   }
 
 //GET ONE

@@ -20,10 +20,12 @@ public class StudentController {
     Student s1 = new Student(1, "Bogdan");
     Student s2 = new Student(2, "Valentin");
     Student s3 = new Student(3, "Silviu");
+    Student s4 = new Student(4, "Costin");
 
     Studenti.add(s1);
     Studenti.add(s2);
     Studenti.add(s3);
+    Studenti.add(s4);
   }
 
 //GET ONE
