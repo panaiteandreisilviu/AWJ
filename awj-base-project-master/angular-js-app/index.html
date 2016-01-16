@@ -55,9 +55,11 @@
                 <td>{{ item.name }}</td>
                 <td>
 
-                    <button ng-click="" class="btn btn-success btn-xs">
+
+                    <button ng-click="getPersoana(item.id)" class="btn btn-success btn-xs">
                         Open <span class="glyphicon glyphicon-edit"></span>
                     </button>
+
 
                     <button ng-click="setUpdatePerson(item)" class="btn btn-info btn-xs">
                         Edit <span class="glyphicon glyphicon-edit"></span>
@@ -126,9 +128,11 @@
                 <td>{{ item.name }}</td>
                 <td>
 
-                    <button ng-click="" class="btn btn-success btn-xs">
+
+                    <button ng-click="getPersoana(item.id)" class="btn btn-success btn-xs">
                         Open <span class="glyphicon glyphicon-edit"></span>
                     </button>
+
 
                     <button ng-click="setUpdatePerson(item)" class="btn btn-info btn-xs">
                         Edit <span class="glyphicon glyphicon-edit"></span>
@@ -179,15 +183,87 @@
 
 
 
+
+
+
+
+
+<br><br><br><br>
+<div class="container" ng-controller="ProdusNgController">
+    <div class="col-lg-12">
+        <h1>Produs</h1>
+
+        <h2>Toate Produsele</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+            <tr ng-repeat="item in persoane" data-id="{{ item.id }}">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>
+
+
+                    <button ng-click="getPersoana(item.id)" class="btn btn-success btn-xs">
+                        Open <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+
+
+                    <button ng-click="setUpdatePerson(item)" class="btn btn-info btn-xs">
+                        Edit <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+
+                    <button ng-click="deletePersoana(item.id)" class="btn btn-danger btn-xs">
+                        Remove <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-lg-12">
+
+        <div class="col-lg-6">
+            <h2>Adaugare</h2>
+
+            <form ng-submit="addPersoana(person)">
+                <div class="form-inline">
+                    <input type="text" class="form-control margin-top" ng-model="person.id" placeholder="ID"/>
+                    <input type="text" class="form-control margin-top" ng-model="person.name" placeholder="Name"/>
+                    <!--<input type="text" class="form-control margin-top" ng-model="person.varsta" placeholder="Varsta"/>-->
+                    <!--<input type="text" class="form-control margin-top" ng-model="person.salariu" placeholder="Salariu"/>-->
+                </div>
+                <button class="btn btn-primary margin-top">Add</button>
+            </form>
+        </div>
+
+        <div class="col-lg-6">
+            <form ng-submit="updatePerson(editPerson)">
+                <div class="form-inline">
+                    <h2>Editare</h2>
+                    <input type="text" class="form-control margin-top" ng-model="editPerson.id" placeholder="ID">
+                    <input type="text" class="form-control margin-top" ng-model="editPerson.name" placeholder="Name">
+                    <!--<input type="text" class="form-control margin-top" ng-model="editPerson.varsta"-->
+                    <!--placeholder="Varsta">-->
+                    <!--<input type="text" class="form-control margin-top" ng-model="editPerson.salariu"-->
+                    <!--placeholder="Salariu">-->
+                </div>
+                <button class="btn btn-info margin-top">Update</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<br><br><br><br><br>
 <div class="container">
     <footer class="footer">
         <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
-
         <p class="text-muted pull-right">Panaite Andrei - Silviu, 331AB</p>
     </footer>
 </div>
-
-
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
