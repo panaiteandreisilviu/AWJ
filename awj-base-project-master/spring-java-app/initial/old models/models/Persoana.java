@@ -7,10 +7,9 @@ public class Persoana {
   private String name;
   private int id;
 
-
   public Persoana() {}
 
-  public Persoana(int id ,String name) {
+  public Persoana(int id, String name) {
       this.name = name;
       this.id = id;
   }
@@ -18,12 +17,18 @@ public class Persoana {
   public String getName() {
       return this.name;
   }
-  
-  public void setName(String nume) {
-      this.name = nume;
-  }
 
   public int getId() {
     return this.id;
+  }
+  
+  public void setId(int id)
+  {
+	  this.id = id;
+  }
+  
+  public void setName(String s)
+  {
+	  name = s;
   }
 }
